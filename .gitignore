@@ -1,4 +1,5 @@
 # ignore virtual enviroment
 
+.gitignore
 __pycache__
 venv/
