@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="icon" href="https://avatars.githubusercontent.com/u/82741688?v=4">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	{% endblock %}
+</head>
+<body>
+	<header>
+		{% block header %}
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+			<ul class="nav nav-pills">
+  				<li class="nav-item">
+    				<a class="nav-link text-white" href="/">Home</a>
+  				</li>
+  				<li class="nav-item">
+    				<a class="nav-link text-white" href="/contact">Contact</a>
+				</li>
+				<li class="nav-item">
+    				<a class="nav-link disabled">Blog(Coming soon!)</a>
+  				</li>
+			</ul>
+		</nav>
+		{% endblock %}
+	</header>
+	<main class="">
+		{% block main %}
+		{% endblock %}
+	</main>
+	<footer>
+		<div class="position-absolute bottom-0 start-50 translate-middle-x">
+			<span class="d-block p-2 bg-dark text-white">
+				{% block footer %}
+					&copy; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
+				{% endblock %}
+			</span>
+		</div>
+	</footer>
+</body>
+</html>

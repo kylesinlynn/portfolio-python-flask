@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block head %}{{ super() }}{% endblock %}
+
+{% block header %}{{ super() }}{% endblock %}
+{% block main %}
+<div class="text-center position-absolute top-50 start-50 translate-middle">
+	<h1>Follow me on</h1>
+	<span class="link">
+		<a href="http://github.com/kylesinlynn" class="link-dark"><i class="lni lni-github-original" style="font-size:5em"></i></a>
+	</span>
+	<span class="link">
+		<a href="http://twitter.com/kylesinlynn" class="link-dark" style="font-size:5em"><i class="lni lni-twitter-original"></i></a>
+	</span>
+</div>
+{% endblock %}
+{% block footer %}{{ super() }}{% endblock %}
